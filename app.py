@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from pykalman import KalmanFilter
 import matplotlib.pyplot as plt
 
 df1 = df2 = None
@@ -29,7 +28,7 @@ if accelemeter and gyroscope:
         file_name="cross_product_data.csv",
         mime="text/csv",
     )
-    
+
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(cross_product_df['x'], cross_product_df['y'], cross_product_df['z'])
